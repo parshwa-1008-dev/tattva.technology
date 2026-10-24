@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1730">
+  <meta name="description" content="Explore internships, part-time opportunities and project-based roles with Tattva Technology.">
+  <title>Careers & Join Our Team | Tattva Technology</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    .careers-hero {
+      padding: 86px 0 70px;
+      color: #fff;
+      background: linear-gradient(135deg, #0b1730, #173b70);
+    }
+
+    .careers-hero .eyebrow {
+      color: #a9c8ff;
+    }
+
+    .careers-hero h1 {
+      max-width: 780px;
+      margin: 16px 0;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .careers-hero p {
+      max-width: 650px;
+      color: #d7e3f7;
+      line-height: 1.8;
+    }
+
+    .careers-content {
+      padding: 70px 0;
+    }
+
+    .careers-intro {
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .opportunity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin: 30px 0 60px;
+    }
+
+    .opportunity-card {
+      padding: 26px;
+      border: 1px solid #e0e7f0;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 10px 35px rgba(14, 35, 70, 0.05);
+    }
+
+    .opportunity-card .role-label {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 20px;
+      background: #edf3ff;
+      color: #204f9b;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .opportunity-card h3 {
+      margin: 17px 0 10px;
+    }
+
+    .opportunity-card p {
+      line-height: 1.7;
+      color: #596579;
+    }
+
+    .application-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .application-note {
+      padding: 28px;
+      border-radius: 18px;
+      background: #f0f5fc;
+    }
+
+    .application-note p,
+    .application-note li {
+      color: #46536a;
+      line-height: 1.8;
+    }
+
+    .application-form {
+      padding: 30px;
+      border: 1px solid #e0e7f0;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 10px 35px rgba(14, 35, 70, 0.05);
+    }
+
+    .application-form label {
+      display: block;
+      margin: 16px 0 7px;
+      font-weight: 600;
+      color: #172641;
+    }
+
+    .application-form input,
+    .application-form select,
+    .application-form textarea {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 9px;
+      background: #fff;
+      color: #172641;
+      font: inherit;
+    }
+
+    .application-form input:focus,
+    .application-form select:focus,
+    .application-form textarea:focus {
+      outline: 2px solid #8bb5ff;
+      outline-offset: 2px;
+    }
+
+    .application-form textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .application-form .button {
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .application-disclaimer {
+      margin-top: 14px;
+      color: #64748b;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .careers-cta {
+      margin-top: 60px;
+      padding: 36px;
+      border-radius: 20px;
+      background: #0b1730;
+      color: #fff;
+    }
+
+    .careers-cta p {
+      color: #d7e3f7;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 800px) {
+      .opportunity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .application-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .careers-hero {
+        padding: 60px 0 48px;
+      }
+
+      .application-form {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- IMPORTANT:
+       Copy your exact original logo/brand element from index.html
+       into the header below. Do not replace your original logo. -->
+
+  <header class="site-header">
+    <div class="container">
+      <nav aria-label="Main navigation"
+           style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:16px 0;">
+<a class="brand" href="#home" aria-label="Tattva Technology home">
+        <svg class="logo" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M15 24H80" stroke="#F4B52C" stroke-width="15" stroke-linecap="round"/>
+          <path d="M48 24V79" stroke="#22A66A" stroke-width="16" stroke-linecap="round"/>
+          <path d="M15 24H48" stroke="#2871E8" stroke-width="16" stroke-linecap="round"/>
+          <path d="M21 67C38 44 64 42 81 50C67 68 42 77 21 72" fill="none" stroke="#2871E8" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="79" cy="19" r="7" fill="#ED5145"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Tattva</strong>
+          <small>TECHNOLOGY</small>
+        </span>
+      </a>
+
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./services.html">Services</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./careers.html" aria-current="page">Careers</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="careers-hero">
+      <div class="container">
+        <span class="eyebrow">Careers &amp; Join Our Team</span>
+        <h1>Build your skills. Make things that matter.</h1>
+        <p>
+          We're creating a technology business focused on useful digital
+          experiences. If you enjoy learning, solving problems and working
+          on real projects, introduce yourself to Tattva Technology.
+        </p>
+        <a class="button button-white" href="#application">
+          Introduce yourself ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="careers-content">
+      <div class="container">
+        <div class="careers-intro">
+          <span class="eyebrow">Ways to contribute</span>
+          <h2>Find a way to work with us</h2>
+          <p>
+            Opportunities may vary depending on our projects and capacity.
+            You can tell us what you do, what you want to learn and how
+            you would like to contribute.
+          </p>
+        </div>
+
+        <div class="opportunity-grid">
+          <article class="opportunity-card">
+            <span class="role-label">Learning &amp; Growth</span>
+            <h3>Internships</h3>
+            <p>
+              Build practical skills through guided tasks and suitable
+              project work. Availability, duration, supervision and
+              compensation will be confirmed individually.
+            </p>
+          </article>
+
+          <article class="opportunity-card">
+            <span class="role-label">Flexible Contribution</span>
+            <h3>Part-time Roles</h3>
+            <p>
+              Explore contributing to web development, design, content
+              or other business tasks alongside your existing commitments.
+              Working hours and terms must be agreed in advance.
+            </p>
+          </article>
+
+          <article class="opportunity-card">
+            <span class="role-label">Project-based</span>
+            <h3>Project Contributors</h3>
+            <p>
+              Collaborate on a defined project or task using your current
+              skills. Scope, deadlines, payment if applicable and ownership
+              terms will be discussed before work begins.
+            </p>
+          </article>
+        </div>
+
+        <div class="application-layout" id="application">
+          <aside class="application-note">
+            <span class="eyebrow">Before applying</span>
+            <h2>Tell us about yourself</h2>
+            <p>
+              You don't need a long résumé to introduce yourself. Explain
+              your skills, interests and the type of contribution you
+              would like to make.
+            </p>
+
+            <h3>Helpful details</h3>
+            <ul>
+              <li>Your skills and areas of interest</li>
+              <li>Projects or a portfolio, if available</li>
+              <li>Your preferred type of opportunity</li>
+              <li>Your availability and learning goals</li>
+            </ul>
+
+            <p>
+              Submitting an application does not guarantee selection,
+              an internship, a job or compensation.
+            </p>
+          </aside>
+
+          <form class="application-form" id="careerForm">
+            <h2>Apply by email</h2>
+            <p>Complete the details below to prepare your application.</p>
+
+            <label for="applicantName">Full name *</label>
+            <input id="applicantName" name="name"
+                   type="text" autocomplete="name" maxlength="100"
+                   required>
+
+            <label for="applicantEmail">Email address *</label>
+            <input id="applicantEmail" name="email"
+                   type="email" autocomplete="email" maxlength="254"
+                   required>
+
+            <label for="opportunity">Opportunity of interest *</label>
+            <select id="opportunity" name="opportunity" required>
+              <option value="">Choose an opportunity</option>
+              <option>Internship</option>
+              <option>Part-time role</option>
+              <option>Project-based contribution</option>
+              <option>Future opportunities</option>
+            </select>
+
+            <label for="skills">Skills and areas of interest *</label>
+            <textarea id="skills" name="skills" maxlength="3000"
+                      placeholder="For example: HTML, CSS, JavaScript, design, writing..."
+                      required></textarea>
+
+            <label for="portfolio">Portfolio or project link (optional)</label>
+            <input id="portfolio" name="portfolio" type="url"
+                   maxlength="500"
+                   placeholder="https://example.com">
+
+            <label for="availability">Availability *</label>
+            <select id="availability" name="availability" required>
+              <option value="">Choose your availability</option>
+              <option>Part-time</option>
+              <option>Project-based</option>
+              <option>Flexible / to be discussed</option>
+            </select>
+
+            <label for="message">A short introduction *</label>
+            <textarea id="message" name="message" maxlength="3000"
+                      placeholder="Tell us what you'd like to contribute or learn."
+                      required></textarea>
+
+            <button class="button" type="submit">
+              Prepare email application ↗
+            </button>
+
+            <p class="application-disclaimer">
+              This form prepares an email in your email application.
+              It does not send or save your application on this website.
+              Review the email and press Send yourself.
+            </p>
+
+            <p id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <section class="careers-cta">
+          <h2>Build on what matters.</h2>
+          <p>
+            Have a question before applying? Contact us and tell us
+            what you have in mind.
+          </p>
+          <a class="button button-white" href="./contact.html">
+            Contact Tattva Technology ↗
+          </a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="padding:24px 0;">
+      <p>&copy; <span id="currentYear"></span> Tattva Technology. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Change this address if your official recruitment email changes.
+    const CAREERS_EMAIL = "parshwap2009@gmail.com";
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("careerForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!this.reportValidity()) return;
+
+      const formData = new FormData(this);
+      const get = (key) => String(formData.get(key) || "").trim();
+
+      const subject = "Tattva Technology Application - " + get("opportunity");
+
+      const body = [
+        "CAREERS & JOIN OUR TEAM APPLICATION",
+        "",
+        "Full name: " + get("name"),
+        "Email: " + get("email"),
+        "Opportunity: " + get("opportunity"),
+        "Skills and interests:",
+        get("skills"),
+        "",
+        "Portfolio / project link: " + (get("portfolio") || "Not provided"),
+        "Availability: " + get("availability"),
+        "",
+        "Introduction:",
+        get("message"),
+        "",
+        "I understand that submitting an application does not guarantee selection or employment."
+      ].join("\n");
+
+      const mailto =
+        "mailto:" + CAREERS_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      document.getElementById("formStatus").textContent =
+        "Your email application is prepared. Review the recipient and details, then send it from your email app.";
+
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>

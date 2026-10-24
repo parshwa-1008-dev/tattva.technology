@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Tattva Technology</title>
+  <meta name="description" content="Contact Tattva Technology to discuss your website design and development project.">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    /* Contact page layout */
+    .contact-hero {
+      padding: 80px 0 55px;
+      background: linear-gradient(135deg, #f8faff, #edf2ff);
+    }
+
+    .contact-hero h1 {
+      max-width: 800px;
+      margin: 16px 0;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.12;
+      color: #17233c;
+    }
+
+    .contact-hero p {
+      max-width: 680px;
+      color: #58677f;
+      line-height: 1.8;
+    }
+
+    .contact-section {
+      padding: 55px 0 80px;
+    }
+
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 65px;
+    }
+
+    .contact-card {
+      min-width: 0;
+      padding: 32px;
+      border: 1px solid #e1e7f0;
+      border-radius: 22px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contact-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #edf3ff;
+      color: #245ff0;
+      font-size: 24px;
+    }
+
+    .contact-card h2 {
+      margin: 0;
+      color: #17233c;
+      font-size: 23px;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: #58677f;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card .button {
+      display: inline-flex;
+      width: auto;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      text-align: center;
+      text-decoration: none;
+      white-space: normal;
+      box-sizing: border-box;
+    }
+
+    .project-form {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 36px;
+      border: 1px solid #e1e7f0;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 15px 45px rgba(23, 35, 60, 0.05);
+    }
+
+    .project-form h2 {
+      margin-top: 0;
+      color: #17233c;
+    }
+
+    .project-form > p {
+      color: #58677f;
+      line-height: 1.7;
+    }
+
+    .contact-field {
+      margin-top: 22px;
+    }
+
+    .contact-field label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 650;
+      color: #17233c;
+    }
+
+    .contact-field input,
+    .contact-field select,
+    .contact-field textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px 14px;
+      border: 1px solid #d7deea;
+      border-radius: 10px;
+      background: #fff;
+      color: #17233c;
+      font: inherit;
+    }
+
+    .contact-field textarea {
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .form-actions button {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .form-note {
+      margin-top: 16px;
+      color: #66738a;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 680px) {
+      .contact-hero {
+        padding: 55px 0 35px;
+      }
+
+      .contact-options {
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 45px;
+      }
+
+      .contact-card,
+      .project-form {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <!-- Keep the same logo as index.html -->
+     <a class="brand" href="#home" aria-label="Tattva Technology home">
+        <svg class="logo" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M15 24H80" stroke="#F4B52C" stroke-width="15" stroke-linecap="round"/>
+          <path d="M48 24V79" stroke="#22A66A" stroke-width="16" stroke-linecap="round"/>
+          <path d="M15 24H48" stroke="#2871E8" stroke-width="16" stroke-linecap="round"/>
+          <path d="M21 67C38 44 64 42 81 50C67 68 42 77 21 72" fill="none" stroke="#2871E8" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="79" cy="19" r="7" fill="#ED5145"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Tattva</strong>
+          <small>TECHNOLOGY</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./services.html">Services</a>
+        <a href="./index.html#work">Our Work</a>
+        <a href="./contact.html" aria-current="page">Contact</a>
+        <a href="./careers.html">Careers</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page introduction -->
+    <section class="contact-hero">
+      <div class="container">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h1>Have a project in mind?</h1>
+        <p>
+          Tell us about your idea. We can discuss your requirements,
+          timeline and budget before deciding the next steps.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact methods -->
+    <section class="contact-section">
+      <div class="container">
+
+        <div class="contact-options">
+
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">✉</div>
+            <h2>Email us</h2>
+            <p>
+              Send your project details and questions directly to our email.
+            </p>
+            <a
+              class="button button-blue"
+              href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=parshwap2009%40gmail.com&amp;su=Website%20Project%20Enquiry"
+              target="_blank"
+              rel="noopener noreferrer">
+              Send an Email
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">☏</div>
+            <h2>Chat on WhatsApp</h2>
+            <p>
+              Message us to discuss your website idea and what you need.
+            </p>
+            <a
+              class="button button-blue"
+              href="https://wa.me/917498326316?text=Hello%20Tattva%20Technology%2C%20I%20am%20interested%20in%20a%20website."
+              target="_blank"
+              rel="noopener noreferrer">
+              Message on WhatsApp
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Project enquiry form -->
+        <form class="project-form" id="projectForm">
+          <p class="eyebrow">YOUR PROJECT</p>
+          <h2>Tell us about your idea</h2>
+          <p>
+            Fill in these details, then choose whether to send your enquiry
+            through Gmail or WhatsApp.
+          </p>
+
+          <div class="contact-field">
+            <label for="clientName">Your name</label>
+            <input
+              id="clientName"
+              name="clientName"
+              type="text"
+              placeholder="Enter your name"
+              autocomplete="name"
+              required>
+          </div>
+
+          <div class="contact-field">
+            <label for="projectType">What type of website do you need?</label>
+            <select id="projectType" name="projectType" required>
+              <option value="">Select a service</option>
+              <option>Business website</option>
+              <option>Landing page</option>
+              <option>Portfolio website</option>
+              <option>Website redesign</option>
+              <option>Online store</option>
+              <option>Other project</option>
+            </select>
+          </div>
+
+          <div class="contact-field">
+            <label for="budget">Approximate budget</label>
+            <select id="budget" name="budget">
+              <option value="Not decided">Not decided yet</option>
+              <option>Under ₹2,000</option>
+              <option>₹2,000–₹5,000</option>
+              <option>₹5,000–₹10,000</option>
+              <option>₹10,000+</option>
+            </select>
+          </div>
+
+          <div class="contact-field">
+            <label for="projectDetails">Project details</label>
+            <textarea
+              id="projectDetails"
+              name="projectDetails"
+              rows="5"
+              placeholder="Describe your website idea and the features you need..."
+              required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="button button-blue" type="submit">
+              Continue to Email
+            </button>
+
+            <button class="button button-blue" type="button" id="sendWhatsApp">
+              Continue to WhatsApp
+            </button>
+          </div>
+
+          <p class="form-note">
+            Your enquiry is prepared in Gmail or WhatsApp. Nothing is
+            automatically sent or stored by this form.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        © <span id="year">2026</span> Tattva Technology. Build on what matters.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // CONTACT SETTINGS
+    const CONTACT_EMAIL = "parshwap2009@gmail.com";
+
+    // Replace with your real WhatsApp number:
+    // India country code 91 + your 10-digit number.
+    // Do not include +, spaces, or dashes.
+    const WHATSAPP_NUMBER = "917498326316";
+
+    const form = document.getElementById("projectForm");
+
+    function getEnquiryMessage() {
+      const name = document.getElementById("clientName").value.trim();
+      const service = document.getElementById("projectType").value;
+      const budget = document.getElementById("budget").value;
+      const details = document.getElementById("projectDetails").value.trim();
+
+      return (
+        "Website Project Enquiry\n\n" +
+        "Name: " + name + "\n" +
+        "Service: " + service + "\n" +
+        "Budget: " + budget + "\n" +
+        "Project details: " + details
+      );
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!form.reportValidity()) return;
+
+      const subject = encodeURIComponent("Website Project Enquiry");
+      const body = encodeURIComponent(getEnquiryMessage());
+
+      const gmailUrl =
+        "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+        encodeURIComponent(CONTACT_EMAIL) +
+        "&su=" + subject +
+        "&body=" + body;
+
+      window.open(gmailUrl, "_blank", "noopener,noreferrer");
+    });
+
+    document.getElementById("sendWhatsApp").addEventListener("click", function () {
+      if (!form.reportValidity()) return;
+
+      if (WHATSAPP_NUMBER.includes("X")) {
+        alert("Please add your real WhatsApp number in contact.html first.");
+        return;
+      }
+
+      const message = encodeURIComponent(getEnquiryMessage());
+      const whatsappUrl =
+        "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + message;
+
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
