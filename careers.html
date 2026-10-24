@@ -386,44 +386,55 @@
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
 
-    document.getElementById("careerForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+   
+document.getElementById("careerForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-      if (!this.reportValidity()) return;
+  if (!this.reportValidity()) return;
 
-      const formData = new FormData(this);
-      const get = (key) => String(formData.get(key) || "").trim();
+  const formData = new FormData(this);
+  const get = (key) => String(formData.get(key) || "").trim();
 
-      const subject = "Tattva Technology Application - " + get("opportunity");
+  const recipient = CAREERS_EMAIL;
 
-      const body = [
-        "CAREERS & JOIN OUR TEAM APPLICATION",
-        "",
-        "Full name: " + get("name"),
-        "Email: " + get("email"),
-        "Opportunity: " + get("opportunity"),
-        "Skills and interests:",
-        get("skills"),
-        "",
-        "Portfolio / project link: " + (get("portfolio") || "Not provided"),
-        "Availability: " + get("availability"),
-        "",
-        "Introduction:",
-        get("message"),
-        "",
-        "I understand that submitting an application does not guarantee selection or employment."
-      ].join("\n");
+  if (!recipient || !recipient.includes("@")) {
+    document.getElementById("formStatus").textContent =
+      "Application could not be prepared. Please check the careers email configuration.";
+    return;
+  }
 
-      const mailto =
-        "mailto:" + CAREERS_EMAIL +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+  const subject = "Tattva Technology Application - " + get("opportunity");
 
-      document.getElementById("formStatus").textContent =
-        "Your email application is prepared. Review the recipient and details, then send it from your email app.";
+  const body = [
+    "CAREERS & JOIN OUR TEAM APPLICATION",
+    "",
+    "Full name: " + get("name"),
+    "Email: " + get("email"),
+    "Opportunity: " + get("opportunity"),
+    "Skills and interests:",
+    get("skills"),
+    "",
+    "Portfolio / project link: " + (get("portfolio") || "Not provided"),
+    "Availability: " + get("availability"),
+    "",
+    "Introduction:",
+    get("message"),
+    "",
+    "I understand that submitting an application does not guarantee selection or employment."
+  ].join("\n");
 
-      window.location.href = mailto;
-    });
+  const mailto =
+    "mailto:" + recipient +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+
+  document.getElementById("formStatus").textContent =
+    "Opening your email app. If nothing opens, check your browser's email-app settings.";
+
+  window.location.assign(mailto);
+});
+
+
   </script>
 </body>
 </html>
