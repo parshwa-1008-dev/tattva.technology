@@ -1,174 +1,490 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070d20">
+<meta name="description" content="Tattva Technology — a brilliant new beginning this Diwali.">
+<title>Tattva Technology | Diwali Launch</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07152d">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Coming Soon | Tattva Technology</title>
-
-  <meta name="description" content="Tattva Technology — Build on what matters. Grand opening on 10 November 2026.">
-
-  <link rel="icon" type="image/png" href="/assets/tattva-logo.png">
-  
-<title>Tattva Technology | Build on What Matters</title>
-<meta name="application-name" content="Tattva Technology">
-<meta property="og:site_name" content="Tattva Technology">
-<meta property="og:title" content="Tattva Technology | Build on What Matters">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Tattva Technology",
-  "alternateName": "Tattva",
-  "url": "https://tattva.technology/"
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-</script>
+
+:root {
+  --gold: #ffd36b;
+  --navy: #070d20;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at top, #193967 0%, transparent 50%),
+    linear-gradient(150deg, #070d20, #10182f);
+  color: white;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#fireworks {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 55px 20px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* FULL BRAND NAME */
+
+.brand {
+  width: 100%;
+  animation: reveal 1.3s ease-out both;
+}
+
+.brand-name {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: clamp(34px, 7vw, 76px);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: clamp(0px, 0.45vw, 4px);
+  overflow-wrap: anywhere;
+  background: linear-gradient(
+    110deg,
+    #fff9dc,
+    #ffd76a,
+    #ffffff,
+    #dca32e,
+    #fff0b0
+  );
+  background-size: 250% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px #ffbf4a55);
+  animation: shimmer 5s linear infinite;
+}
+
+.brand-line {
+  width: min(270px, 65%);
+  height: 2px;
+  margin: 15px auto 12px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #e7b84e,
+    #fff4c8,
+    #e7b84e,
+    transparent
+  );
+  box-shadow: 0 0 15px #ffc95770;
+}
+
+.tagline {
+  color: #c4ddff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin-top: 38px;
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 850px;
+  margin-top: 20px;
+  font-size: clamp(30px, 5.4vw, 58px);
+  line-height: 1.15;
+  color: #fff3c8;
+  text-shadow: 0 0 30px #ffc45b30;
+}
+
+.intro {
+  max-width: 590px;
+  margin-top: 18px;
+  color: #bac9e2;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.highlight {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* COUNTDOWN */
+
+.launch-card {
+  width: min(100%, 560px);
+  margin-top: 32px;
+  padding: 25px 20px;
+  border: 1px solid #e9c36a60;
+  border-radius: 20px;
+  background: #ffffff09;
+  box-shadow: 0 15px 60px #0003, inset 0 0 25px #ffd56a08;
+  backdrop-filter: blur(8px);
+}
+
+.launch-label {
+  color: #e9cc8a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.8;
+}
+
+.launch-date {
+  margin-top: 10px;
+  color: #fff7de;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+#countdown {
+  margin-top: 20px;
+  color: white;
+  font-size: clamp(22px, 4.5vw, 36px);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+.caption {
+  margin-top: 8px;
+  color: #95a8c9;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+button {
+  margin-top: 28px;
+  padding: 15px 27px;
+  border: 1px solid #fff0b8;
+  border-radius: 50px;
+  background: linear-gradient(110deg, #fff0b4, #ffbd43);
+  color: #14203b;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 0 28px #ffbd4340;
+  transition: transform .25s, box-shadow .25s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 38px #ffbd4375;
+}
+
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 5px;
+}
+
+footer {
+  margin-top: 34px;
+  color: #8495b5;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.flame {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 50%;
+  width: 24px;
+  height: 43px;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  border-radius: 55% 45% 50% 50%;
+  background: radial-gradient(
+    ellipse at 50% 72%,
+    #ffffff 0%,
+    #fff9b2 18%,
+    #ffcf35 42%,
+    #ff8117 68%,
+    #ff4b00 82%,
+    transparent 84%
+  );
+  filter: drop-shadow(0 0 9px #ffb52e);
+  animation: flameFlicker .22s ease-in-out infinite alternate;
+}
+
+.flame::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 22px;
+  bottom: 1px;
+  left: 7px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #fff3a1, #ffffff);
+  box-shadow: 0 0 10px #fff7d1;
+  animation: innerFlame .3s ease-in-out infinite alternate;
+}
+
+@keyframes flameFlicker {
+  0% {
+    transform: translateX(-50%) rotate(-11deg) scale(.82, .92);
+  }
+  50% {
+    transform: translateX(-47%) rotate(7deg) scale(1.12, 1.08);
+  }
+  100% {
+    transform: translateX(-53%) rotate(-5deg) scale(.94, 1.18);
+  }
+}
+
+@keyframes innerFlame {
+  from { opacity: .65; transform: scaleY(.8); }
+  to { opacity: 1; transform: scaleY(1.15); }
+}
 
 
-  <style>
-    * { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 22px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #fff;
-      background: radial-gradient(ellipse at top, #123e79, #07152d 65%);
-    }
+/* FALLING GOLD SPARKLES */
 
-    .card {
-      width: 100%;
-      max-width: 760px;
-      padding: 45px 25px;
-      text-align: center;
-      border: 1px solid #284568;
-      border-radius: 24px;
-      background: rgba(255,255,255,.035);
-      box-shadow: 0 25px 80px rgba(0,0,0,.3);
-    }
+.star {
+  position: fixed;
+  top: -12px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #ffe7a2;
+  box-shadow: 0 0 10px #ffc94a;
+  pointer-events: none;
+  z-index: 1;
+  animation: fall linear forwards;
+}
 
-    .logo {
-      display: block;
-      width: min(100%, 300px);
-      height: 180px;
-      object-fit: contain;
-      margin: 0 auto 25px;
-    }
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
 
-    .brand {
-      margin: 0;
-      font-size: clamp(32px, 7vw, 52px);
-      letter-spacing: 3px;
-    }
+/* FIRECRACKER BURSTS */
 
-    .brand span { color: #25d4f5; }
+@keyframes shimmer {
+  to { background-position: 250% center; }
+}
 
-    .tagline {
-      color: #c4d5ea;
-      font-size: 20px;
-      margin-top: 14px;
-    }
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(18px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
 
-    .line {
-      width: 70px;
-      height: 3px;
-      margin: 30px auto;
-      background: linear-gradient(90deg, #168bff, #25d4f5);
-      border-radius: 5px;
-    }
+@media (max-width: 480px) {
+  .page {
+    padding: 45px 16px 125px;
+  }
 
-    .label {
-      color: #8ecbff;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      font-weight: bold;
-    }
+  .eyebrow {
+    letter-spacing: 3px;
+  }
 
-    h2 {
-      margin: 20px 0;
-      font-size: clamp(27px, 6vw, 43px);
-      line-height: 1.2;
-    }
+  .launch-card {
+    padding: 21px 12px;
+  }
 
-    .date {
-      color: #e4c887;
-      font-size: clamp(24px, 5vw, 34px);
-      font-weight: bold;
-    }
+  .launch-label {
+    letter-spacing: 1.5px;
+  }
 
-    .description {
-      max-width: 500px;
-      margin: 22px auto;
-      color: #bdcbe0;
-      line-height: 1.8;
-    }
+  
+}
 
-    .status {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 18px;
-      border: 1px solid #24577b;
-      border-radius: 50px;
-      color: #8eeaff;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    footer {
-      margin-top: 38px;
-      color: #8198b7;
-      font-size: 12px;
-    }
-
-    @media (max-width: 480px) {
-      .card { padding: 35px 18px; }
-      .logo { height: 140px; }
-    }
-  </style>
+@media (prefers-reduced-motion: reduce) {
+  .brand-name, .brand, .flame, .flame::after, .diya {
+    animation-duration: 1s !important;
+  }
+}
+</style>
 </head>
 
 <body>
-  <main class="card">
-    <img
-      class="logo"
-      src="/assets/tattva-logo.png"
-      alt="Tattva Technology logo"
-      onerror="this.style.display='none'"
-    >
+<canvas id="fireworks" aria-hidden="true"></canvas>
 
-    <h1 class="brand">TATTVA <span>TECHNOLOGY</span></h1>
-    <p class="tagline">Build on what matters.</p>
+<main class="page">
+  <header class="brand">
+    <div class="brand-name">Tattva Technology</div>
+    <div class="brand-line"></div>
+    <div class="tagline">Build on What Matters</div>
+  </header>
 
-    <div class="line"></div>
+  <div class="eyebrow">✨ A NEW BEGINNING ✨</div>
 
-    <p class="label">A new beginning</p>
-    <h2>Something meaningful is coming.</h2>
+  <h1>Something Brilliant Is Coming</h1>
 
-    <p class="description">
-      We are preparing to introduce Tattva Technology to the world.
-      A new chapter in technology, creativity and meaningful digital
-      experiences begins soon.
-    </p>
+  <p class="intro">
+    This Diwali, a new journey begins.
+    Get ready for the next chapter of
+    <span class="highlight">Tattva Technology</span> —
+    built with purpose, powered by innovation,
+    and designed for the future.
+  </p>
 
-    <p class="label">Our Grand Opening</p>
-    <p class="date">10 November 2026</p>
+  <section class="launch-card" aria-label="Launch countdown">
+    <div class="launch-label">OUR OFFICIAL LAUNCH</div>
+    <div class="launch-date">10 November 2026 · 9:00 AM IST</div>
+    <div id="countdown" role="timer">Loading countdown...</div>
+    <div class="caption">TIME UNTIL LAUNCH</div>
+  </section>
 
-    <div class="status">OPENING TIME TO BE ANNOUNCED</div>
+  <button id="celebrate">✨ Celebrate Diwali ✨</button>
 
-    <footer>
-      &copy; <span id="year"></span> Tattva Technology. All rights reserved.
-    </footer>
-  </main>
+  <footer>Made with purpose. Built for the future. 🇮🇳</footer>
+</main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+
+
+<script>
+/* LIVE COUNTDOWN */
+const countdown = document.getElementById("countdown");
+const launchTime = new Date("2026-11-10T09:00:00+05:30").getTime();
+
+function updateCountdown() {
+  const remaining = launchTime - Date.now();
+
+  if (remaining <= 0) {
+    countdown.textContent = "🎉 IT'S LAUNCH DAY! 🎉";
+    return;
+  }
+
+  const days = Math.floor(remaining / 86400000);
+  const hours = Math.floor((remaining % 86400000) / 3600000);
+  const minutes = Math.floor((remaining % 3600000) / 60000);
+  const seconds = Math.floor((remaining % 60000) / 1000);
+
+  countdown.textContent =
+    `${days}d  ${String(hours).padStart(2, "0")}h  ` +
+    `${String(minutes).padStart(2, "0")}m  ` +
+    `${String(seconds).padStart(2, "0")}s`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* FIRECRACKER PARTICLE ANIMATION */
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+let particles = [];
+let animationFrame = null;
+let canvasWidth = 0;
+let canvasHeight = 0;
+
+function resizeCanvas() {
+  const ratio = Math.min(window.devicePixelRatio || 1, 2);
+  canvasWidth = window.innerWidth;
+  canvasHeight = window.innerHeight;
+  canvas.width = canvasWidth * ratio;
+  canvas.height = canvasHeight * ratio;
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+const colors = ["#ffd166", "#ff7b00", "#ffffff", "#42c9ff", "#ff4fa3"];
+
+function firecracker(x, y) {
+  for (let i = 0; i < 65; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 1.2 + Math.random() * 4.5;
+
+    particles.push({
+      x, y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      life: 55 + Math.random() * 25,
+      maxLife: 80,
+      size: 1.5 + Math.random() * 2.5,
+      color: colors[Math.floor(Math.random() * colors.length)]
+    });
+  }
+
+  if (particles.length > 1000) particles = particles.slice(-1000);
+  if (animationFrame === null) animateFireworks();
+}
+
+function animateFireworks() {
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  particles = particles.filter(p => p.life > 0);
+
+  for (const p of particles) {
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += .025;
+    p.vx *= .985;
+    p.vy *= .985;
+    p.life--;
+
+    ctx.globalAlpha = Math.max(0, p.life / p.maxLife);
+    ctx.fillStyle = p.color;
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = p.color;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  ctx.globalAlpha = 1;
+  ctx.shadowBlur = 0;
+
+  if (particles.length > 0) {
+    animationFrame = requestAnimationFrame(animateFireworks);
+  } else {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = null;
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  }
+}
+
+document.getElementById("celebrate").addEventListener("click", () => {
+  firecracker(canvasWidth * .23, canvasHeight * .32);
+  setTimeout(() => firecracker(canvasWidth * .77, canvasHeight * .30), 180);
+  setTimeout(() => firecracker(canvasWidth * .50, canvasHeight * .48), 350);
+});
+
+/* FALLING GOLD SPARKLES */
+function createStar() {
+  const star = document.createElement("span");
+  star.className = "star";
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.opacity = .3 + Math.random() * .7;
+  star.style.animationDuration = (4 + Math.random() * 5) + "s";
+
+  document.body.appendChild(star);
+  setTimeout(() => star.remove(), 9500);
+}
+
+for (let i = 0; i < 24; i++) {
+  setTimeout(createStar, i * 180);
+}
+
+setInterval(createStar, 450);
+</script>
 </body>
 </html>
