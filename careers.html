@@ -380,61 +380,113 @@
   </footer>
 
   <script>
-    // Change this address if your official recruitment email changes.
-    const CAREERS_EMAIL = "parshwap2009@gmail.com";
+  // Tattva Technology Careers Email
+  const CAREERS_EMAIL = "parshwap2009@gmail.com";
 
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
+  // Update the copyright year, if this element exists.
+  const yearElement = document.getElementById("currentYear");
 
-   
-document.getElementById("careerForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  if (!this.reportValidity()) return;
-
-  const formData = new FormData(this);
-  const get = (key) => String(formData.get(key) || "").trim();
-
-  const recipient = CAREERS_EMAIL;
-
-  if (!recipient || !recipient.includes("@")) {
-    document.getElementById("formStatus").textContent =
-      "Application could not be prepared. Please check the careers email configuration.";
-    return;
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
 
-  const subject = "Tattva Technology Application - " + get("opportunity");
+  // Get the careers form and status message.
+  const careerForm = document.getElementById("careerForm");
+  const formStatus = document.getElementById("formStatus");
 
-  const body = [
-    "CAREERS & JOIN OUR TEAM APPLICATION",
-    "",
-    "Full name: " + get("name"),
-    "Email: " + get("email"),
-    "Opportunity: " + get("opportunity"),
-    "Skills and interests:",
-    get("skills"),
-    "",
-    "Portfolio / project link: " + (get("portfolio") || "Not provided"),
-    "Availability: " + get("availability"),
-    "",
-    "Introduction:",
-    get("message"),
-    "",
-    "I understand that submitting an application does not guarantee selection or employment."
-  ].join("\n");
+  if (careerForm) {
+    careerForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-  const mailto =
-    "mailto:" + recipient +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
+      // Check required fields and built-in HTML validation.
+      if (!careerForm.reportValidity()) {
+        return;
+      }
 
-  document.getElementById("formStatus").textContent =
-    "Opening your email app. If nothing opens, check your browser's email-app settings.";
+      const formData = new FormData(careerForm);
 
-  window.location.assign(mailto);
-});
+      // Read form values safely.
+      const getValue = function (key) {
+        return String(formData.get(key) || "").trim();
+      };
 
+      const fullName =
+        getValue("name") ||
+        getValue("full_name");
 
-  </script>
+      const applicantEmail =
+        getValue("email");
+
+      const opportunity =
+        getValue("opportunity");
+
+      const skills =
+        getValue("skills");
+
+      const portfolio =
+        getValue("portfolio");
+
+      const availability =
+        getValue("availability");
+
+      const introduction =
+        getValue("message") ||
+        getValue("introduction");
+
+      // Create the email subject.
+      const subject =
+        "Tattva Technology Job Application - " +
+        (opportunity || "General Application");
+
+      // Create the email body.
+      const body = [
+        "TATTVA TECHNOLOGY",
+        "CAREERS / JOB APPLICATION",
+        "",
+        "Full name: " + (fullName || "Not provided"),
+        "Applicant email: " + (applicantEmail || "Not provided"),
+        "Opportunity: " + (opportunity || "Not provided"),
+        "",
+        "Skills and interests:",
+        skills || "Not provided",
+        "",
+        "Portfolio / project link:",
+        portfolio || "Not provided",
+        "",
+        "Availability:",
+        availability || "Not provided",
+        "",
+        "Introduction:",
+        introduction || "Not provided",
+        "",
+        "------------------------------",
+        "This application was prepared through the Tattva Technology careers website."
+      ].join("\n");
+
+      // Prepare the email without sending it automatically.
+      const mailtoLink =
+        "mailto:" +
+        CAREERS_EMAIL +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+
+      // Inform the applicant.
+      if (formStatus) {
+        formStatus.textContent =
+          "Your application email is prepared. Check the recipient and details in your email app, then press Send.";
+      }
+
+      // Open the device's configured email application.
+      window.location.href = mailtoLink;
+    });
+  } else {
+    console.error(
+      'Careers form not found. Check that your form has id="careerForm".'
+    );
+  }
+</script>
+  
 </body>
 </html>
