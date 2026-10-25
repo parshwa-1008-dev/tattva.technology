@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07152d">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Coming Soon | Tattva Technology</title>
+  <meta name="description" content="Tattva Technology — Build on what matters. Grand opening on 10 November 2026.">
+
+  <link rel="icon" type="image/png" href="/assets/tattva-logo.png">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background: radial-gradient(ellipse at top, #123e79, #07152d 65%);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 760px;
+      padding: 45px 25px;
+      text-align: center;
+      border: 1px solid #284568;
+      border-radius: 24px;
+      background: rgba(255,255,255,.035);
+      box-shadow: 0 25px 80px rgba(0,0,0,.3);
+    }
+
+    .logo {
+      display: block;
+      width: min(100%, 300px);
+      height: 180px;
+      object-fit: contain;
+      margin: 0 auto 25px;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: clamp(32px, 7vw, 52px);
+      letter-spacing: 3px;
+    }
+
+    .brand span { color: #25d4f5; }
+
+    .tagline {
+      color: #c4d5ea;
+      font-size: 20px;
+      margin-top: 14px;
+    }
+
+    .line {
+      width: 70px;
+      height: 3px;
+      margin: 30px auto;
+      background: linear-gradient(90deg, #168bff, #25d4f5);
+      border-radius: 5px;
+    }
+
+    .label {
+      color: #8ecbff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 20px 0;
+      font-size: clamp(27px, 6vw, 43px);
+      line-height: 1.2;
+    }
+
+    .date {
+      color: #e4c887;
+      font-size: clamp(24px, 5vw, 34px);
+      font-weight: bold;
+    }
+
+    .description {
+      max-width: 500px;
+      margin: 22px auto;
+      color: #bdcbe0;
+      line-height: 1.8;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      border: 1px solid #24577b;
+      border-radius: 50px;
+      color: #8eeaff;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      margin-top: 38px;
+      color: #8198b7;
+      font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 35px 18px; }
+      .logo { height: 140px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <img
+      class="logo"
+      src="/assets/tattva-logo.png"
+      alt="Tattva Technology logo"
+      onerror="this.style.display='none'"
+    >
+
+    <h1 class="brand">TATTVA <span>TECHNOLOGY</span></h1>
+    <p class="tagline">Build on what matters.</p>
+
+    <div class="line"></div>
+
+    <p class="label">A new beginning</p>
+    <h2>Something meaningful is coming.</h2>
+
+    <p class="description">
+      We are preparing to introduce Tattva Technology to the world.
+      A new chapter in technology, creativity and meaningful digital
+      experiences begins soon.
+    </p>
+
+    <p class="label">Our Grand Opening</p>
+    <p class="date">10 November 2026</p>
+
+    <div class="status">OPENING TIME TO BE ANNOUNCED</div>
+
+    <footer>
+      &copy; <span id="year"></span> Tattva Technology. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
